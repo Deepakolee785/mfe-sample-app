@@ -1,0 +1,24 @@
+{
+  "name": "webpack-mfes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "app1",
+      "api",
+      "components"
+    ]
+  },
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "start": "concurrently \"wsrun --parallel start\""
+  },
+  "author": "Deepak Oli",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "wsrun": "^5.2.4"
+  }
+}
